@@ -84,7 +84,8 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 				gain = 1},
 				{object=user,
 				max_hear_distance = 16,
-				pitch = 1 + math.random(-10, 10)*0.005,}
+				pitch = 1 + math.random(-10, 10)*0.005,},
+				true
 			)
 
 			-- Saturation
