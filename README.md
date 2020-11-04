@@ -39,7 +39,7 @@ All mods which add food through standard measures (`minetest.item_eat`) are alre
 supported automatically. Poisoned food needs special support.
 
 ### Known supported food mods
-* Apple from Minetest Game [`default`]
+* Apple and Blueberries from Minetest Game [`default`]
 * Red and brown mushroom from Minetest Game [`flowers`]
 * Bread from Minetest Game [`farming`]
 * [`animalmaterials`] (Mob Framework (`mobf` modpack))
@@ -90,7 +90,7 @@ This mod is free software.
 
 * `hbhunger_icon.png`—PilzAdam ([MIT License](https://opensource.org/licenses/MIT)), modified by BlockMen
 * `hbhunger_bgicon.png`—PilzAdam (MIT License), modified by BlockMen
-* `hbhunger_bar.png—Wuzzy` (MIT License)
+* `hbhunger_bar.png`—Wuzzy (MIT License)
 * `hbhunger_icon_health_poison.png`—celeron55 ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)), modified by BlockMen, modified again by Wuzzy
 * Everything else: MIT License, by BlockMen and Wuzzy
 
