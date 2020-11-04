@@ -72,10 +72,9 @@ supported automatically. Poisoned food needs special support.
 * Food ([`food`], [`food_basic`])
 * Sweet Foods [`food_sweet`]
 
-### Examples
+### Example
 
 * Eating an apple (from Minetest Game) increases your satiation by 2;
-* eating a bread (from Minetest Game) increases your satiation by 4.
 
 ## Licensing
 This mod is free software.
