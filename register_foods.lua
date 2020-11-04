@@ -1,12 +1,13 @@
 if minetest.get_modpath("default") ~= nil then
 	hbhunger.register_food("default:apple", 2)
+	hbhunger.register_food("default:blueberries", 2)
 end
 if minetest.get_modpath("flowers") ~= nil then
 	hbhunger.register_food("flowers:mushroom_brown", 1)
 	hbhunger.register_food("flowers:mushroom_red", 1, "", 3)
 end
 if minetest.get_modpath("farming") ~= nil then
-	hbhunger.register_food("farming:bread", 4)
+	hbhunger.register_food("farming:bread", 5)
 end
 
 if minetest.get_modpath("mobs") ~= nil then
