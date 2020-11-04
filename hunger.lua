@@ -89,9 +89,9 @@ function hbhunger.item_eat(hunger_change, replace_with_item, poisen, heal, sound
 			)
 
 			-- Saturation
-			if h < 30 and hunger_change then
+			if h < hbhunger.SAT_MAX and hunger_change then
 				h = h + hunger_change
-				if h > 30 then h = 30 end
+				if h > hbhunger.SAT_MAX then h = hbhunger.SAT_MAX end
 				hbhunger.hunger[name] = h
 				hbhunger.set_hunger_raw(user)
 			end
