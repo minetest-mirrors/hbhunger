@@ -151,4 +151,38 @@ minetest.register_globalstep(function(dtime)
 	if timer2 > hbhunger.HUNGER_TICK then timer2 = 0 end
 end)
 
+minetest.register_chatcommand("satiation", {
+	privs = {["server"]=true},
+	params = S("[<player>] <satiation>"),
+	description = S("Set satiation of player or yourself"),
+	func = function(name, param)
+		if minetest.settings:get_bool("enable_damage") == false then
+			return false, S("Not possible, damage is disabled.")
+		end
+		local targetname, satiation = string.match(param, "(%S+) (%S+)")
+		if not targetname then
+			satiation = param
+		end
+		satiation = tonumber(satiation)
+		if not satiation then
+			return false, S("Invalid satiation!")
+		end
+		if not targetname then
+			targetname = name
+		end
+		local target = minetest.get_player_by_name(targetname)
+		if target == nil then
+			return false, S("Player @1 does not exist.", targetname)
+		end
+		if satiation > hbhunger.SAT_MAX then
+			satiation = hbhunger.SAT_MAX
+		elseif satiation < 0 then
+			satiation = 0
+		end
+		hbhunger.hunger[targetname] = satiation
+		hbhunger.set_hunger_raw(target)
+		return true
+	end,
+})
+
 end
