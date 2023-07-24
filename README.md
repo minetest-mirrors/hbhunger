@@ -1,4 +1,4 @@
-# Hunger with HUD bar [`hbhunger`]
+# Hunger with HUD Bar [`hbhunger`]
 
 * Version: 1.1.2
 
