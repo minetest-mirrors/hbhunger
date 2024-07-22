@@ -13,11 +13,7 @@ minetest.do_item_eat = function(hp_change, replace_with_item, itemstack, user, p
 	local itemstack_work = ItemStack(itemstack)
 	-- Force other callbacks from other mods to run first
 	local result = orig_eat(hp_change, replace_with_item, itemstack_init, user, pointed_thing)
-	if result ~= nil then
-		itemstack_work = result
-	else
-		itemstack_work = itemstack_init
-	end
+
 	-- Our own item eat handler
 	return hbhunger.eat(hp_change, replace_with_item, itemstack_work, user, pointed_thing)
 end
